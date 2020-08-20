@@ -1,9 +1,10 @@
 const express = require("express");
 
-const db = require("../data/dbConfig.js");
+const account = require("./accountsRouter");
 
 const server = express();
 
 server.use(express.json());
+server.use("/api/account", account);
 
 module.exports = server;
